@@ -1,0 +1,60 @@
+fieldset {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding-top: .5em;
+	width: auto
+}
+legend {
+	color: green;
+	font-weight: bold;
+	font-size: 100%;
+}
+label {
+	float: left;
+	width: 10em;
+	text-align: right;
+}
+		
+input {
+	width: 20em;
+	margin-left: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+#login {
+	width: 30em;
+}
+
+#login label {
+	width: 5em;
+}
+
+#login_buttons {
+	text-align: center;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 13em;
+}
+
+#reg_buttons {
+	text-align: center;
+}
+
+#reg_buttons legend {
+	text-align: left;
+}
+
+.reg_fieldset {
+	width: 32em;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Registration</title>
+
+	<link rel="stylesheet" href="css/register.css">
+</head>
+
+<body>
+  <div>
+    <header>
+    </header>
+
+    <div>
+      <fieldset class="reg_fieldset">
+      	<legend>Registration Information</legend>
+      	<label for="email">E-Mail:</label>
+      	<input type="email" name="email" id="email" required><br>
+      	<label for="password">Password:</label>
+      	<input type="password" name="password" id="password" required
+      			pattern="[a-zA-Z0-9]{6,}"
+      			placeholder="At least 6 letters or numbers"><br> 
+        <label for="verify">Verify Password:</label>
+      	<input type="password" name="verify" id="verify" required><br>
+      </fieldset>
+	  <fieldset class="reg_fieldset">
+	  	<legend>Member Information</legend>
+      	<label for="first_name">First Name:</label>
+      	<input type="first_name" name="first_name" id="first_name" autofocus required><br>
+      	<label for="last_name">Last Name:</label>
+      	<input type="last_name" name="last_name" id="last_name" required><br>
+      	<label for="address">Address</label>
+      	<input type="address" name="address" id="address" required><br>
+      	<label for="state">State:</label>
+      	<input type="text" name="state" id="state" required><br>
+      	<label for="zip">ZIP Code:</label>
+      	<input type="text" name="zip" id="zip" required
+      			placeholder="5 letters or numbers"
+      			pattern="[a-zA-Z0-9]{5}"><br>
+      	<label for="phone">Phone Number:</label>
+      	<input type="tel" name="phone" id="phone" 
+      			placeholder="999-999-9999" required
+      			pattern="\d{3}[\-]\d{3}[\-]\d{4}"><br>		
+      </fieldset>  
+      <fieldset id="reg_buttons" class="reg_fieldset">
+      	<legend>Submit Your Information</legend>
+      	<input type="submit" class="button" id="submit" value="Submit">
+      	<input type="reset" class="button" id="reset" value="Reset Fields"><br>
+      </fieldset>    	    
+    </div>
+
+    <footer>
+    </footer>
+  </div>
+</body>
+</html>
