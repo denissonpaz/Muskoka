@@ -35,6 +35,11 @@ td {
 	padding-top: 10px;
 }
 
+#div_question {
+	border: 2px solid red;
+	padding-top: 10px;
+}
+
 #div11 {
 	border: 2px solid red;
 	padding-top: 10px;

@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel="stylesheet" href="css/question.css">
+	
+	<script>
+	var answer_letter;
+	function allowDrop(ev) {
+	    ev.preventDefault();
+	}
+	
+	function drag(ev) {
+	    ev.dataTransfer.setData("text", ev.target.id);
+	}
+	
+	function drop(ev) {
+	    ev.preventDefault();
+	    var src = document.getElementById(ev.dataTransfer.getData("text"));
+	    var srcParent = src.parentNode;
+	    var target = ev.currentTarget.firstElementChild;
+	    
+	    ev.currentTarget.replaceChild(src, target);
+	    srcParent.appendChild(target)
+	    
+	    answer_letter = src.id;
+	}
+	
+	var $ = function (id) {
+		return document.getElementById(id);
+	}
+
+	var check_answer = function() {
+		if (answer_letter == "l")
+			alert("Correct");
+		else {
+			alert("Incorrect");
+		}
+	}	// end of check_answer
+	
+	window.onload = function() {
+		$("btn_answer").onclick = check_answer;
+	}
+	</script>
+</head>
+<body>
+	<fieldset>
+		<legend id="question_num">
+			Question #1
+		</legend>
+		<p id="question">A device used in television and moviemaking to project a speaker's script out of sight of the audience.</p>
+	</fieldset>
+
+	<br><br>
+	<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+	    <img id="a" src="img/a.gif" width="50" height="50" draggable="true" ondragstart="drag(event)" />
+	    <img id="o" src="img/o.gif" width="50" height="50" draggable="true" ondragstart="drag(event)" />
+	    <img id="e" src="img/e.gif" width="50" height="50" draggable="true" ondragstart="drag(event)" />
+	    <img id="o" src="img/o.gif" width="50" height="50" draggable="true" ondragstart="drag(event)" />
+	    <img id="l" src="img/l.gif" width="50" height="50" draggable="true" ondragstart="drag(event)" />
+	    <img id="o" src="img/o.gif" width="50" height="50" draggable="true" ondragstart="drag(event)" />
+	</div>
+	<br><br>
+	
+	<table>
+		<tr>
+			<td id="div1">A</td>
+			<td id="div2">P</td>
+			<td id="div3">P</td>
+			<td id="div4">
+				<div id="div_question" ondrop="drop(event)" ondragover="allowDrop(event)">
+    				<img id="drag2" ondragstart="drag(event)" />
+    			</div>				
+			</td>
+
+			<td id="div6">E</td>
+		</tr>
+	</table><br><br>
+	<table>	
+		<tr>
+			<td id="div1">T</td>
+			<td id="div2">
+				<div id="div_question" ondrop="drop(event)" ondragover="allowDrop(event)">
+    				<img id="drag2" ondragstart="drag(event)" />
+    			</div>				
+			</td>
+			<td id="div3">R</td>
+			<td id="div4">
+				<div id="div_question" ondrop="drop(event)" ondragover="allowDrop(event)">
+    				<img id="drag2" ondragstart="drag(event)" />
+    			</div>				
+			</td>
+			<td id="div6">N</td>
+			<td id="div7">T</td>
+			<td id="div8">
+				<div id="div_question" ondrop="drop(event)" ondragover="allowDrop(event)">
+    				<img id="drag2" ondragstart="drag(event)" />
+    			</div>				
+			</td>
+		</tr>
+	</table>
+	
+    <footer>
+    	<br><br>
+    	<input type="button" class="button" id="btn_answer" value="Check Answer">
+    </footer>
+</body>
+</html>
